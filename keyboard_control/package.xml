@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package>
+  <name>keyboard_control</name>
+  <version>1.0.0</version>
+  <description>keyboard control for twist robots</description>
+
+  <maintainer email="gurunarayana100@gmail.com">Guru_narayana</maintainer>
+
+  <license>BSD</license>
+
+
+  <author>Guru Narayana</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>rospy</run_depend>
+</package>
