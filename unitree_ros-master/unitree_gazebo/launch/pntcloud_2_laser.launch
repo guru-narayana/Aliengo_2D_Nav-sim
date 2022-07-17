@@ -1,0 +1,19 @@
+<launch>
+    <node pkg="pointcloud_to_laserscan" type="pointcloud_to_laserscan_node" name="pointcloud_to_laserscan">
+      <remap from="cloud_in" to="/camera/depth/points"/>
+      <remap from="scan" to="/camera/scan" />
+      <rosparam>
+        min_height: 0.0
+        max_height: 1.0
+        angle_min: -0.74351
+        angle_max: 0.74351
+        angle_increment: 0.008726646
+        scan_time: 0.05
+        range_min: 0.1
+        range_max: 4.0
+        use_inf: true
+        concurrency_level: 0
+
+      </rosparam>
+    </node>
+</launch>
