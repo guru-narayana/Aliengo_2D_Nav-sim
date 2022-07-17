@@ -1,0 +1,8 @@
+<launch>
+    <node pkg="unitree_controller" type="unitree_servo" name="unitree_servo" respawn="false" output="screen">
+    </node>
+    
+    <node pkg="aliengo_gait_controller" type="Aliengo_gait_Control" name="Aliengo_gait_Control" respawn="false" output="screen">
+    </node>
+
+</launch>
