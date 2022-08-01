@@ -67,3 +67,5 @@ Make sure you closed the teleop_keyboard node before starting the navigation
 # Final Result
 ## Gait control
 ![aliengo gait](https://github.com/guru-narayana/Aliengo_Nav-sim/blob/main/data/aliengo_gait.gif)
+## Navigation
+![aliengo navigation](https://github.com/guru-narayana/Aliengo_Nav-sim/blob/main/data/aliengo_navigation.gif)
