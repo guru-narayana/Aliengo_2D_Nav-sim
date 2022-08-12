@@ -1,6 +1,6 @@
 
+#!/usr/bin/env python
 
-#!/usr/bin/env python3
 import keyboard
 import signal
 import rospy
@@ -32,16 +32,16 @@ while rospy.is_shutdown() == False:
     # setting the linear and angular velocities of bot
     # based on the key pressed
     if key=="w":
-        vel.linear.x+=2
+        vel.linear.x+=0.8
         #vel.angular.z =0
     if key=="s":
-        vel.linear.x+=-2
+        vel.linear.x+=-0.8
         #vel.angular.z =0
     if key=="a":
-        vel.angular.z +=2
+        vel.angular.z +=0.8
         #vel.linear.x=0
     if key=="d":
-        vel.angular.z+=-2
+        vel.angular.z+=-0.8
         #vel.linear.x=0
     if key=="x":
         vel.angular.z = 0

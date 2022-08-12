@@ -1,0 +1,35 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/guru/catkin_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/guru/catkin_ws/src/ros_control-noetic-devel/combined_robot_hw/include/**",
+        "/home/guru/catkin_ws/src/ros_control-noetic-devel/combined_robot_hw_tests/include/**",
+        "/home/guru/catkin_ws/src/ros_control-noetic-devel/controller_interface/include/**",
+        "/home/guru/catkin_ws/src/ros_control-noetic-devel/controller_manager/include/**",
+        "/home/guru/catkin_ws/src/ros_control-noetic-devel/controller_manager_tests/include/**",
+        "/home/guru/catkin_ws/src/ros_control-noetic-devel/hardware_interface/include/**",
+        "/home/guru/catkin_ws/src/ros_control-noetic-devel/joint_limits_interface/include/**",
+        "/home/guru/catkin_ws/src/rtab_map_depends/octomap_rviz_plugins/include/**",
+        "/home/guru/catkin_ws/src/Aliengo_Nav-sim/realsense_gazebo_custom/realsense_gazebo_plugin/include/**",
+        "/home/guru/catkin_ws/src/rtab_map_testing_pkg/include/**",
+        "/home/guru/catkin_ws/src/ros_control-noetic-devel/transmission_interface/include/**",
+        "/home/guru/catkin_ws/src/turtlebot3_simulations-master/turtlebot3_gazebo/include/**",
+        "/home/guru/catkin_ws/src/Aliengo_Nav-sim/unitree_ros-master/unitree_controller/include/**",
+        "/home/guru/catkin_ws/src/Aliengo_Nav-sim/unitree_ros-master/unitree_legged_control/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

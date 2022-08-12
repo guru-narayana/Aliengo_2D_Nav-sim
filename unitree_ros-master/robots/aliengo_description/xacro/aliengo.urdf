@@ -420,10 +420,10 @@
       <min_depth>0</min_depth>-->
     <sensor name="cameracolor" type="camera">
       <camera name="camera">
-        <horizontal_fov>1.21125850088</horizontal_fov>
+        <horizontal_fov>1.5</horizontal_fov>
         <image>
-          <width>640</width>
-          <height>480</height>
+          <width>1280</width>
+          <height>720</height>
           <format>RGB_INT8</format>
         </image>
         <clip>
@@ -458,7 +458,7 @@
           <stddev>0.05</stddev>
         </noise>
       </camera>
-      <always_on>1</always_on>
+      <always_on>0</always_on>
       <update_rate>90</update_rate>
       <visualize>0</visualize>
     </sensor>
@@ -480,13 +480,13 @@
           <stddev>0.05</stddev>
         </noise>
       </camera>
-      <always_on>1</always_on>
+      <always_on>0</always_on>
       <update_rate>90</update_rate>
       <visualize>0</visualize>
     </sensor>
     <sensor name="cameradepth" type="depth">
       <camera name="camera">
-        <horizontal_fov>1.4870205227</horizontal_fov>
+        <horizontal_fov>1.5</horizontal_fov>
         <image>
           <width>1280</width>
           <height>720</height>
@@ -520,16 +520,12 @@
       <infrared1CameraInfoTopicName>infra1/camera_info</infrared1CameraInfoTopicName>
       <infrared2TopicName>infra2/image_raw</infrared2TopicName>
       <infrared2CameraInfoTopicName>infra2/camera_info</infrared2CameraInfoTopicName>
-      <colorOpticalframeName>camera_color_optical_frame</colorOpticalframeName>
+      <colorOpticalframeName>camera_depth_optical_frame</colorOpticalframeName>
       <depthOpticalframeName>camera_depth_optical_frame</depthOpticalframeName>
       <infrared1OpticalframeName>camera_left_ir_optical_frame</infrared1OpticalframeName>
       <infrared2OpticalframeName>camera_right_ir_optical_frame</infrared2OpticalframeName>
-      <rangeMinDepth>0.01</rangeMinDepth>
-      <rangeMaxDepth>1000.0</rangeMaxDepth>
-      <pointCloud>True</pointCloud>
-      <pointCloudTopicName>depth/points</pointCloudTopicName>
-      <pointCloudCutoff>0.25</pointCloudCutoff>
-      <pointCloudCutoffMax>9.0</pointCloudCutoffMax>
+      <rangeMinDepth>0.28</rangeMinDepth>
+      <rangeMaxDepth>10.0</rangeMaxDepth>
     </plugin>
   </gazebo>
 
@@ -1173,4 +1169,3 @@
   </transmission>
   <!-- <xacro:stairs stairs="15" xpos="0" ypos="2.0" zpos="0" /> -->
 </robot>
-

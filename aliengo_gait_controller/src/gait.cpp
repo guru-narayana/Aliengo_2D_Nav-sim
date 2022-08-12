@@ -16,9 +16,9 @@ vector<double> FR_current_xyz_st = {0,0,0};
 vector<double> RR_current_xyz_st = {0,0,0}; // actual Rear Right foot position wrt thigh coordinate frame
 
 // target variables set by user
-double SL = 0.12; // step length
-double SH = 0.04; // step height
-double Height = 0.34; // height at which robot need to stand
+double SL = 0.2; // step length , This is the max step length set by user
+double SH = 0.03; // step height
+double Height = 0.33; // height at which robot need to stand
 
 
 // varible for storing the publisher object
@@ -31,7 +31,8 @@ unitree_legged_msgs::Aliengo_Joint_controll jnt_set_st;
 void req_vel_callback(const geometry_msgs::Twist::ConstPtr& msg)
 {
     req_vel[0] = msg->linear.x;
-    req_vel[1] = msg->angular.z;
+    req_vel[1] = msg->angular.z; 
+    SL = min(0.2,sqrt(pow(req_vel[0],2) + pow(req_vel[1],2))*0.1); // Changes step length depending on velocity to keep robot stable
 }
 void joint_current_act_state_callback(const sensor_msgs::JointState::ConstPtr& msg)
 {
@@ -45,7 +46,7 @@ void joint_current_act_state_callback(const sensor_msgs::JointState::ConstPtr& m
     FL_current_jnt_st[1] = (double)msg->position[2];
     FL_current_jnt_st[2] = (double)msg->position[0];
     
-    FR_current_jnt_st[0] = -(double)msg->position[1+3];
+    FR_current_jnt_st[0] = (double)msg->position[1+3];
     FR_current_jnt_st[1] = -(double)msg->position[2+3];
     FR_current_jnt_st[2] = -(double)msg->position[0+3];
 
@@ -53,7 +54,7 @@ void joint_current_act_state_callback(const sensor_msgs::JointState::ConstPtr& m
     RL_current_jnt_st[1] = (double)msg->position[2+6];
     RL_current_jnt_st[2] = (double)msg->position[0+6];
 
-    RR_current_jnt_st[0] = -(double)msg->position[1+9];
+    RR_current_jnt_st[0] = (double)msg->position[1+9];
     RR_current_jnt_st[1] = -(double)msg->position[2+9];
     RR_current_jnt_st[2] = -(double)msg->position[0+9];
 
@@ -297,11 +298,10 @@ int main(int argc,char** argv){
     cout<<"Gait controller initialised use ctrl-c to quit "<<"\n";
     while(ros::ok()){
         ros::spinOnce();
-        if(req_vel[0] !=0 || req_vel[1] != 0){
-            vector<vector<double>> Trajectory_end_points = Robot_end_points(req_vel,Robot_angular_mtn_angles,swing,SL,Height);
-            Trajectory_exec(Trajectory_end_points,swing);
-            swing = 1-swing;
-        }
+        vector<vector<double>> Trajectory_end_points = Robot_end_points(req_vel,Robot_angular_mtn_angles,swing,SL,Height);
+        Trajectory_exec(Trajectory_end_points,swing);
+        swing = 1-swing;
+        
     }
     return 0;
     

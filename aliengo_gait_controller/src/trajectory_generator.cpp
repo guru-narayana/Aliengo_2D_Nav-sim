@@ -54,13 +54,26 @@ vector<vector<double>> Robot_angular_motion_endpoints(double L1,double L,double 
 }
 
 vector<vector<double>> Robot_end_points(vector<double> req_vel,  vector<vector<double>> mtn_angles, int swing, double SL,double H){
+    double z_offset = 0.03;
+
+    if(req_vel[0] ==0 && req_vel[1] == 0){
+        vector<double> FL_end_point = {H,L1,z_offset};
+        vector<double> FR_end_point = {H,-L1,z_offset};
+        vector<double> RL_end_point = {H,L1,z_offset};
+        vector<double> RR_end_point = {H,-L1,z_offset};
+        vector<vector<double>> out = {FL_end_point,FR_end_point,RL_end_point,RR_end_point};
+        T = 0.1;
+        return out;
+    }
+
+
+
     
     double Rr = sqrt( pow((L1+width/2),2)  + pow(Length/2,2));
     double x = 1 - pow(SL,2)/(2*pow(Rr,2));
     double theta = atan(sqrt(1-pow(x,2))/x);  
     double angular_velocity = abs((req_vel[1]*SL)/theta);
     double velocity{};
-    double z_offset = 0.03;
     // For Front Left
     vector<double> FL_end_point = {0,0,0};
     double FL_theta{};
