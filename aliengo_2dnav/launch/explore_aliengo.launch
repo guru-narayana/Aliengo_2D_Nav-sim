@@ -1,0 +1,7 @@
+<launch>
+    <node type="rviz" name="rviz" pkg="rviz" args="-d $(find aliengo_2dnav)/rviz/rviz_explore.rviz" />
+    <node pkg="explore_lite" type="explore" respawn="false" name="explore" output="screen">
+        <rosparam file="$(find aliengo_2dnav)/config/exploration.yaml" command="load" />
+    </node>
+    <include file="$(find aliengo_2dnav)/launch/navigation_aliengo.launch"></include>
+</launch>

@@ -8,6 +8,7 @@
     <rosparam file="$(find aliengo_2dnav)/config/local_costmap_params.yaml" command="load" />
     <rosparam file="$(find aliengo_2dnav)/config/global_costmap_params.yaml" command="load" /> 
     <rosparam file="$(find aliengo_2dnav)/config/base_local_planner_params.yaml" command="load" />
+    <rosparam file="$(find aliengo_2dnav)/config/global_planner.yaml" command="load" />
  </node>
 
 </launch> 

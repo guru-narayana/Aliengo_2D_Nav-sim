@@ -14,9 +14,12 @@ gait and navigation related: `aliengo_gait_controller `, `aliengo_2dnav`
 
 Robot data control related: `keyboard_control `, `depthimage_to_laserscan`
 
+SLAM:  `rtab_map_testing_pkg `
 # Dependencies
 * [ROS](https://www.ros.org/)
 * [Gazebo8](http://gazebosim.org/)
+* [RTAB_Map](https://github.com/introlab/rtabmap_ros)
+* [m-explore](https://github.com/hrnr/m-explore)
 # Build
 <!-- If you would like to fully compile the `unitree_ros`, please run the following command to install relative packages. -->
 
@@ -55,6 +58,11 @@ And you can use the keyboard to control the robot after launching:
 rosrun keyboard_control teleop_keyboard.py
 ```
 Use the keyboard keys w,a,s,d to increase the velocity in that perticular direction and use x on the keyboard to stop the robot motion 
+## rtab_map_testing_pkg
+To launch the RTAB Map localisation node use the command 
+```
+roslaunch rtab_map_testing_pkg rtab_map.launch 
+```
 ## aliengo_2dnav
 To use the navigation on aliengo simulation run the following command
 ```
@@ -63,9 +71,14 @@ roslaunch aliengo_2dnav navigation_aliengo.launch
 This will open the rviz GUI window which you can use to input the goal point for navigation
 
 Make sure you closed the teleop_keyboard node before starting the navigation
-
+It is also possible to create a map of environment without manually controlling the robot using the m-explore package to use it run the follwing (don't run it together with navigation_aliengo as this launch file launches navigation by itself)
+```
+roslaunch aliengo_2dnav explore_aliengo.launch 
+```
 # Final Result
 ## Gait control
 ![aliengo gait](https://github.com/guru-narayana/Aliengo_Nav-sim/blob/main/data/aliengo_gait.gif)
 ## Navigation
 ![aliengo navigation](https://github.com/guru-narayana/Aliengo_Nav-sim/blob/main/data/aliengo_navigation.gif)
+## Exploration
+![aliengo explore](https://github.com/guru-narayana/Aliengo_Nav-sim/blob/main/data/aliengo_explore.gif)

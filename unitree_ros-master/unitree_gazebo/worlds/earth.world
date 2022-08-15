@@ -43,6 +43,29 @@
         <include>
           <uri>model://turtlebot3_house</uri>
         </include>
-    
+            <model name="static_environment">
+        <static>true</static>
+            <link name="static_box">
+                <pose>1.1 -0.7 0.5 0 0 0</pose>
+                <collision name="static_box_collision">
+                    <geometry>
+                        <box>
+                            <size>1 1 1</size>
+                        </box>
+                    </geometry>
+                </collision>
+                <visual name="static_box_visual">
+                    <geometry>
+                        <box>
+                            <size>1 1 1</size>
+                        </box>
+                    </geometry>
+                    <material>
+                        <ambient>0.2 0.2 0.2 1.0</ambient>
+                        <diffuse>.421 0.225 0.0 1.0</diffuse>
+                    </material>
+                </visual>
+            </link>
+        </model>
     </world>
 </sdf>

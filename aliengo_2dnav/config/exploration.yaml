@@ -1,0 +1,10 @@
+robot_base_frame: base
+costmap_topic: /rtabmap/grid_map
+visualize: true
+planner_frequency: 0.33
+progress_timeout: 5.0
+potential_scale: 3.0
+orientation_scale: 0.0
+gain_scale: 1.0
+transform_tolerance: 0.3
+min_frontier_size: 0.75
