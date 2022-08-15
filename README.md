@@ -20,6 +20,8 @@ SLAM:  `rtab_map_testing_pkg `
 * [Gazebo8](http://gazebosim.org/)
 * [RTAB_Map](https://github.com/introlab/rtabmap_ros)
 * [m-explore](https://github.com/hrnr/m-explore)
+* [Navigation](https://github.com/ros-planning/navigation)
+* [geometry2](https://github.com/ros/geometry2)
 # Build
 <!-- If you would like to fully compile the `unitree_ros`, please run the following command to install relative packages. -->
 
@@ -32,13 +34,12 @@ For ROS Kinetic:
 sudo apt-get install ros-kinetic-controller-manager ros-kinetic-ros-control ros-kinetic-ros-controllers ros-kinetic-joint-state-controller ros-kinetic-effort-controllers ros-kinetic-velocity-controllers ros-kinetic-position-controllers ros-kinetic-robot-controllers ros-kinetic-robot-state-publisher ros-kinetic-gazebo8-ros ros-kinetic-gazebo8-ros-control ros-kinetic-gazebo8-ros-pkgs ros-kinetic-gazebo8-ros-dev
 ```
 
-
 Then you can use catkin_make to build:
 ```
 cd ~/catkin_ws
 catkin_make
 ```
-
+Similarly build the remaining dependencies 
 # Detail of Packages
 
 ## unitree_gazebo:
