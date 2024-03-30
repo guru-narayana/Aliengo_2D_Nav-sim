@@ -5,7 +5,7 @@
 # Introduction
 Here are the ROS simulation packages for Unitree AlienGo Quadruped, You can simulate the robot in Gazebo, so you can perform high-level control (Using the Twist message) and the low-level control using the (control the torque, position and angular velocity) of the robot joints.You can also perform navigation using the ROS navigaiton stack using the configuration files built into the following packages.
 # Publication
-If you use this work in an academic context, please cite the following publications as relevant:
+If you use this work in an academic context, please cite the following publication as relevant:
 
 N. G. Narayanaswamy and F. Kanehiro, "Vision-Based Software System for Indoor Quadrupedal Locomotion: Integrated with SLAM, Foothold Planning, and Multimodal Gait," 2024 IEEE/SICE International Symposium on System Integration (SII)
 ```
