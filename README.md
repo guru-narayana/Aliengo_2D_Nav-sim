@@ -4,7 +4,22 @@
 [![Latest Release](https://img.shields.io/badge/Latest%20Release-27%20July%202022-yellow.svg)](https://github.com/guru-narayana/Aliengo_Nav-sim/releases/tag/v3.0)
 # Introduction
 Here are the ROS simulation packages for Unitree AlienGo Quadruped, You can simulate the robot in Gazebo, so you can perform high-level control (Using the Twist message) and the low-level control using the (control the torque, position and angular velocity) of the robot joints.You can also perform navigation using the ROS navigaiton stack using the configuration files built into the following packages.
+# Publication
+If you use this work in an academic context, please cite the following publications as relevant:
 
+N. G. Narayanaswamy and F. Kanehiro, "Vision-Based Software System for Indoor Quadrupedal Locomotion: Integrated with SLAM, Foothold Planning, and Multimodal Gait," 2024 IEEE/SICE International Symposium on System Integration (SII)
+```
+@INPROCEEDINGS{10417432,
+  author={Narayanaswamy, Nara Guru and Kanehiro, Fumio},
+  booktitle={2024 IEEE/SICE International Symposium on System Integration (SII)}, 
+  title={Vision-Based Software System for Indoor Quadrupedal Locomotion: Integrated with SLAM, Foothold Planning, and Multimodal Gait}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={1330-1335},
+  keywords={Simultaneous localization and mapping;Trajectory planning;Computer architecture;Software systems;Stability analysis;Planning;Quadrupedal robots},
+  doi={10.1109/SII58957.2024.10417432}}
+```
 ## Packages:
 modified unitree_ros-master packages :  `robots/aliengo_description `, `unitree_controller `,`unitree_gazebo `,`unitree_legged_control `,`unitree_legged_msgs `
 
